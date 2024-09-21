@@ -1,0 +1,32 @@
+.flashy-text {
+  font-size: 72px; /* 大きなフォントサイズ */
+  font-weight: bold; /* 太字 */
+  color: #ff00ff; /* ベースカラー */
+  background: linear-gradient(90deg, #ff00ff, #00ffff, #ffff00); /* 派手なグラデーション */
+  -webkit-background-clip: text; /* テキスト部分に背景を適用 */
+  color: transparent; /* テキスト自体を透明にして背景色を表示 */
+  
+  text-shadow: 
+    3px 3px 0px #ff0000, /* 赤い影 */
+    -3px -3px 0px #0000ff, /* 青い影 */
+    5px 5px 15px rgba(0, 255, 0, 0.75); /* 緑のぼやけた影 */
+  
+  letter-spacing: 2px; /* 文字間のスペース */
+  text-transform: uppercase; /* 全て大文字 */
+  animation: flashy-animation 3s infinite; /* アニメーション */
+}
+
+@keyframes flashy-animation {
+  0% {
+    transform: scale(1);
+    color: #ff00ff;
+  }
+  50% {
+    transform: scale(1.2) rotate(10deg);
+    color: #ffff00;
+  }
+  100% {
+    transform: scale(1);
+    color: #00ffff;
+  }
+}
